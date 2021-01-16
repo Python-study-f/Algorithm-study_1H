@@ -1,12 +1,5 @@
 from collections import deque
 
-# 4 5 1
-# 1 2
-# 1 3
-# 1 4
-# 2 4
-# 3 4
-
 def dfs(v):
     print(v, end= ' ')
     visited[v] = True                   # 노드 방문 기록 = True
@@ -27,8 +20,8 @@ def bfs(v):
                 visited[i] = True           # 노드 방문 기록 = True
                 print(i, end=' ')           # 출력
 
-
-n, m, v = map(int, input().split())
+# map(int, input().split())
+n, m, v = 4, 5, 1
 
 graph = [[] for _ in range(n + 1)]      # Empty Graph array
 
