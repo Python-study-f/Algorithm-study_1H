@@ -1,6 +1,6 @@
 
 """
-- 문제해결 : BFS, deque 이용한 다익스트라
+- 문제해결 : BFS, deque
 - 구현 :
     distance배열 하나 생성 후 최대값으로 다 채워놓는다.
     board[ny][nx] + distance[y][x] < distance[ny][nx] -> distance[ny][nx] 값 갱신
