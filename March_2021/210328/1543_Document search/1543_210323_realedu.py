@@ -9,6 +9,7 @@
 
 import sys
 
+# sys를 이용해서는 안되는가?
 # string_1st = sys.stdin.readline().split()
 # string_2nd = sys.stdin.readline().split()
 
