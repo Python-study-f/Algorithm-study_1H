@@ -5,3 +5,5 @@ class Solution:
         perm = permutations(nums,len(nums))
 
         return list(perm)
+
+    
