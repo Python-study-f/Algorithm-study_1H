@@ -1,0 +1,1 @@
+		1257 - K번째 문자열 : https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=6&contestProbId=AV18KWf6ItECFAZN&categoryId=AV18KWf6ItECFAZN&categoryType=CODE&problemTitle=&orderBy=RECOMMEND_COUNT&selectCodeLang=ALL&select-1=6&pageSize=10&pageIndex=1
