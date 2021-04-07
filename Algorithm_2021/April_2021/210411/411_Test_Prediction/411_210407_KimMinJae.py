@@ -2,7 +2,6 @@ import sys; input= lambda:sys.stdin.readline().rstrip();
 sys.setrecursionlimit(50000)
 n, m= map(int, input().split())
 mp= [[*map(int, input().split())] for _ in range(n)]
-
 Dy= [0,0,1,-1]
 Dx= [1,-1,0,0]
 out= [[False]*m for _ in range(n)]
@@ -17,35 +16,8 @@ def outside(y, x):
                 mp[ny][nx]=-1
                 outside(ny, nx)
 
-
-candi= set()
-for c in range(m):
-    if not mp[0][c]: # outside found
-        candi.add((0,c))
-        mp[0][c]=-1
-        out[0][c]=True
-        outside(0, c)
-
-for c in range(m):
-    if not mp[n-1][c]: # outside found
-        candi.add((n-1,c))
-        mp[n-1][c]=-1
-        out[n-1][c]=True
-        outside(m-1, c)
-
-for r in range(n):
-    if not mp[r][0]: # outside found
-        candi.add((r,0))
-        mp[r][0]=-1
-        out[r][0]=True
-        outside(r, 0)
-
-for r in range(n):
-    if not mp[r][m-1]: # outside found
-        candi.add((r,m-1))
-        mp[r][m-1]=-1
-        out[r][m-1]=True
-        outside(r, m-1)
+candi= [[0,0]]
+outside(0,0)
 
 
 chk=[[False]*m for _ in range(n)]
@@ -55,7 +27,7 @@ def melt(y, x):
         ny= y+dy
         nx= x+dx
         if 0<=nx and nx<m and 0<=ny and ny<n:
-            if mp[ny][nx]==1:
+            if mp[ny][nx]==1 and not chk[ny][nx]:
                 cnt=0
                 for sy, sx in zip(Dy, Dx):
                     cy= ny+sy
@@ -73,16 +45,13 @@ def melt(y, x):
 
 t=0
 nxt=[]
-candi=list(candi)
-print(candi)
-[print(*el) for el in mp]
+#[print(*el) for el in mp]
 while candi:
+    #print(candi)
     t+=1
     nxt=[]
     for y, x in candi:
         melt(y, x)
-
-
 
     for y, x in nxt:
         chk[y][x]=False
@@ -91,10 +60,10 @@ while candi:
         outside(y, x)
     nxt=list(nxt)
     candi=nxt[:]
-    print()
-    [print(*el) for el in mp]
-    print()
-    [print(*el) for el in out]
+    #print()
+    #[print(*el) for el in mp]
+    #print()
+    #[print(*el) for el in out]
 
 print(t-1)
 
@@ -126,4 +95,48 @@ print(t-1)
 1 1 0 1
 1 0 1 1
 0 1 1 0
+
+
+8 9
+1 0 0 0 0 0 0 0 1
+0 1 0 1 0 1 0 1 0
+0 1 0 1 0 1 0 1 0
+1 1 0 1 0 1 0 1 1
+0 1 0 1 0 1 0 1 0
+1 1 0 1 0 1 0 1 0
+0 1 0 1 0 1 0 1 0
+1 0 0 0 0 0 0 0 1
+
+8 9
+1 0 1 0 1 0 1 0 1
+0 1 0 1 0 1 0 1 0
+1 0 1 0 1 0 1 0 1
+0 1 0 1 0 1 0 1 0
+1 0 1 0 1 0 1 0 1
+0 1 0 1 0 1 0 1 0
+1 0 1 0 1 0 1 0 1
+0 1 0 1 0 1 0 1 0
+
+
+8 9
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+
+10 3
+0 0 0
+0 1 0
+0 0 0
+0 0 0
+0 1 0
+0 0 0
+0 0 0
+0 1 0
+0 0 0
+0 0 0
 '''
