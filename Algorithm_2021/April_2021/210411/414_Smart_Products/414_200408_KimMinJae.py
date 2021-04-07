@@ -1,5 +1,4 @@
 n, k= map(int, input().split())
-
 belt= list(input())
 ans=0
 for rob in range(n):
