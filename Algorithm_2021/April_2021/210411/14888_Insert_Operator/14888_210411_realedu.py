@@ -1,4 +1,11 @@
 
+"""
+bottom-up : 1952ms
+top-down : 124ms
+
+예상 밖으로 재귀를 이용한 풀이가 더 빠르다.?
+"""
+# bottom - up 풀이
 from itertools import permutations
 
 import sys
@@ -44,3 +51,44 @@ for op in op_set:
 
 print(max_value)
 print(min_value)
+
+##############################################################################
+
+# DFS + 백트래킹 풀이
+import sys
+
+input = sys.stdin.readline
+
+N = int(input())
+A = list(map(int, input().split()))
+operator = list(map(int, input().split())) # -> operator list로 할 시 for op in op_set에서 계산 처리할 때 복잡해짐.
+max_value, min_value = -1e9, 1e9
+
+def dfs(idx, result):
+    global max_value, min_value
+
+    if idx == N:
+        max_value = max(max_value, result)
+        min_value = min(min_value, result)
+        return
+
+    # 백트래킹
+    for i in range(4):
+        if operator[i] > 0:
+            operator[i] -= 1
+            if i == 0:
+                dfs(idx + 1, result + A[idx])
+            elif i == 1:
+                dfs(idx + 1, result - A[idx])
+            elif i == 2:
+                dfs(idx + 1, result * A[idx])
+            elif i == 3:
+                if result < 0:
+                    dfs(idx + 1, -(-result // A[idx]))
+                else:
+                    dfs(idx + 1, result // A[idx])
+            operator[i] += 1
+
+dfs(1, A[0])
+
+print("{}\n{}".format(max_value, min_value))
