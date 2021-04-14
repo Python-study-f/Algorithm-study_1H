@@ -22,6 +22,7 @@ print(my_str)
 # 결국 인터넷 보고 풀음 ㅠㅠ,, 떠오르지 않음
 # 링크 참조
 # https://ksshlee.github.io/baekjoon/%EB%B0%B1%EC%A4%80-9935-%EB%AC%B8%EC%9E%90%EC%97%B4-%ED%8F%AD%EB%B0%9C/
+# 이런 문제는 실력이 늘지 않는 거 같다.. 나중에 문제를 모아서 한번 풀어야겠다
 
 my_str = str(input())
 find_str = str(input())
