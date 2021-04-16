@@ -1,4 +1,4 @@
-# WA why? ? wheteullyoyo?.?
+# WA why? ? deepcodying prob, rule misunderstood
 import sys; input= lambda: sys.stdin.readline().rstrip()
 sys.setrecursionlimit(100000)
 import time
@@ -24,7 +24,7 @@ def move(d,L):
     R=[]
     #0
     if d==0:
-        R=[el for el in L]
+        R=[el[:] for el in L]
     #90
     elif d==1:
         R= list(map(list, zip(*[el[::-1] for el in L])))
@@ -35,10 +35,11 @@ def move(d,L):
     elif d==3:
         R= list(map(list, zip(*[el for el in L[::-1]])))
 
-    
+    '''
     print('rotated',d)
     [print(*el) for el in R]
     print()
+    '''
     for i in range(n):
         for j in range(n):
             ths=R[i][j]
@@ -50,10 +51,11 @@ def move(d,L):
                         R[i][k]=0
                         R[i][j]=-ths*2
                     break #1
-    
+    '''
     print('block put together')
     [print(*el) for el in R]
     print()
+    '''
     for i in range(n):
         for j in range(n):
             if not R[i][j]:
@@ -63,9 +65,12 @@ def move(d,L):
                 if find<n:
                     R[i][j], R[i][find]= R[i][find], R[i][j]
             ans= min(ans,R[i][j])
+            R[i][j]=abs(R[i][j])
+    '''
     print('converged')
     [print(*el) for el in R]
     print()
+    '''
 
 
     # d 맞춰 원상태
