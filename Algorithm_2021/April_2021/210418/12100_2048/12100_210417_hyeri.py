@@ -4,12 +4,6 @@ N = int(input())
 mp = [[*map(int, input().split())] for _ in range(N)]
 
 
-def check(tmp):
-    for i in range(N):
-        print(*tmp[i])
-    print()
-
-
 def bfs():
     dq = deque()
     dq.append(mp)
@@ -17,9 +11,7 @@ def bfs():
     for c in range(6):
         for qs in range(len(dq)):
             v = dq.popleft()
-            #print("time:{}".format(c))
-            #check(v)
-
+            
             for i in range(N):
                 for j in range(N):
                     ans = max(ans, v[i][j])
