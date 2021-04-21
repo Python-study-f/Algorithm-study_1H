@@ -55,7 +55,6 @@ def right():
             else:
                 bd[x][i] = no1
             i -= 1
-    pass
 def up():
     global mx
     for y in range(n):
