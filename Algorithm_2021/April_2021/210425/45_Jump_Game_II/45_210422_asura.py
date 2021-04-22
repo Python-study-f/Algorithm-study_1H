@@ -9,7 +9,7 @@ class Solution: # O(N^2)
             return 1
 
         dp = [int(1e9)] * len(nums)
-        dp[0], dp[1] = 0, 1
+        dp[0] = 0
 
         for i in range(1, len(nums)):
             for j in range(0, i):
