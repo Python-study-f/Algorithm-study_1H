@@ -17,6 +17,6 @@ for i in range(N):
     for j in range(M):
         if data[i][j] != 0: # 어차피 인덱스 넘어가더라더 dp를 맨처음에 0으로 초기화해서 전혀 상관X
                 dp[i][j] =min(dp[i-1][j-1],dp[i-1][j],dp[i][j-1])+1
-                ans = max(dp[i][j], ans)
+        ans = max(dp[i][j], ans)
 
 print(ans**2)
