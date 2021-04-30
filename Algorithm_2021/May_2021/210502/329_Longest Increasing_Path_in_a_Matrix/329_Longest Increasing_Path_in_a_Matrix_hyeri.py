@@ -7,7 +7,6 @@ class Solution:
         
         def dfs(x, y, n):   
             ans = n
-            #print(str(x)+ " "+str(y)+" : "+str(n))
             for d in range(4):
                 tx = x + dx[d]
                 ty = y + dy[d]
