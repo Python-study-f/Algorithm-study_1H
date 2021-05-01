@@ -13,13 +13,11 @@ else:
     for i in range(1, N):
         dp.append(arr[i]-arr[i-1])
     dp.sort()
-    for i in range(K-1):
-        if len(dp) == 0:
-            dp.append(0)
-            break
-        else:
-            dp.pop()
-    print(sum(dp))
+    s = 0
+    for i in range(len(dp)-K+1):
+        s += dp[i]
+    print(s)
+
 
 # 탐욕알고리즘
 # 전체 구간에서 K-1개 만큼 구간 삭제 
