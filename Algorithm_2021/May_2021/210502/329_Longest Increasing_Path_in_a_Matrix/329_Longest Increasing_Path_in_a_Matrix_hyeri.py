@@ -22,3 +22,6 @@ class Solution:
                 result = max(dfs(i, j, 1), result)
         return result
             
+
+# visit 배열을 이용해 해당 위치에 올 수 있는 가장 긴 거리를 기록
+# 해당 위치의 기록보다 짧으면 검사 X -> 시간 단축 
