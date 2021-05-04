@@ -1,7 +1,7 @@
 T = int(input())
 num = {"ZRO": 0, "ONE": 0, "TWO": 0, "THR": 0, "FOR": 0, "FIV": 0, "SIX": 0, "SVN": 0, "EGT": 0, "NIN": 0}
 for test_case in range(1, T+1):
-    tmp = input()
+    tmp = input()                                       # 쓸모없는 입력;;
     sent = list(input().split())
     print("#{} ".format(test_case))
 
