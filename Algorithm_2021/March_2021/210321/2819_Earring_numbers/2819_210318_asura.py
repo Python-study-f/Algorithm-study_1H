@@ -1,6 +1,6 @@
 from collections import deque
 
-def dfs(pos,cnt,my_str):
+def bfs(pos,cnt,my_str):
     x, y = pos
 
     if cnt == 7:
@@ -27,6 +27,6 @@ dq = deque()
 
 for i in range(4):
     for j in range(4):
-        dfs((i,j),0,'')
+        bfs((i,j),0,'')
 
 print(len(lst_set))
