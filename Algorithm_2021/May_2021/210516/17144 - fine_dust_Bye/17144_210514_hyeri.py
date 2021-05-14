@@ -84,4 +84,4 @@ for i in range(R):
 print(answer + 2)
 
 # 구현, 시뮬레이션, 삼성 기출?
-# python3 으로 시간 초과,  pypy 로 
+# python3 으로 시간 초과,  pypy 로 통과
