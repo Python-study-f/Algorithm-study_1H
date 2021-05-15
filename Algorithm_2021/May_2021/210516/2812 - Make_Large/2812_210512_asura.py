@@ -19,7 +19,7 @@ from collections import deque
 N, K = map(int,input().split())
 data = list(map(str,input()))
 cnt = 0
-ans = deque()
+ans = []
 
 
 for i in range(N):
