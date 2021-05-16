@@ -1,0 +1,5 @@
+A= input()
+B= input()
+A, B= int(A,2), int(B,2)
+print(A,B)
+print(bin(A^B)[2:].count('0'))

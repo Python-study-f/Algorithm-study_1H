@@ -1,3 +1,1 @@
-
-		3074 - 입국심사  https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AV_XEokaAEcDFAX7&categoryId=AV_XEokaAEcDFAX7&categoryType=CODE&problemTitle=&orderBy=SUBMIT_COUNT&selectCodeLang=ALL&select-1=4&pageSize=10&pageIndex=3
-
+3074 - 입국심사  https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AV_XEokaAEcDFAX7&categoryId=AV_XEokaAEcDFAX7&categoryType=CODE&problemTitle=&orderBy=SUBMIT_COUNT&selectCodeLang=ALL&select-1=4&pageSize=10&pageIndex=3

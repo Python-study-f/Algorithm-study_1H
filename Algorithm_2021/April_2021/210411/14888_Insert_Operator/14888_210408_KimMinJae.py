@@ -32,5 +32,3 @@ def backtrack(i,s):
 
 backtrack(1,L[0])           
 print(mx,mn,sep='\n')
-
-
