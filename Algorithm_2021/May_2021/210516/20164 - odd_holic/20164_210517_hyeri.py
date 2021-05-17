@@ -1,6 +1,6 @@
 N = input()
 
-def dfs(num, n, ok):
+def dfs(num, n, ok):    # ok 가 True : 최댓값, False : 최솟값
     if len(num) == 1:
         if int(num[0]) % 2 != 0:
             n += 1
