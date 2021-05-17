@@ -40,4 +40,5 @@ class Solution:
                 else:
                     make_mp(ax, ay, "O")
         return board
-                
+    
+# 434 ms 로 너무 오래 걸림. 맵 전체를 탐색해서 그런거 같음.
