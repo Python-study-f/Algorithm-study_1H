@@ -15,5 +15,5 @@ def solution(stones, k):
         answer = max(answer, dp[len(stones)-i])
     return answer
   
- # O(n) 이 안 되서 당황스럽;; 정확성 100.0 효율성 0.0 점 코드 => 총 64.1
+ # 정확성 100.0 효율성 0.0 점 코드 => 총 64.1
  # 이진탐색을 적용해서 다시 풀어 볼 예정
