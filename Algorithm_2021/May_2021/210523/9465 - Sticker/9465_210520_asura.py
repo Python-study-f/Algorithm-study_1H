@@ -16,3 +16,31 @@ for _ in range(TC):
         dp[1][i] = max(data[1][i] + dp[0][i - 1], dp[1][i - 1])
 
     print(max(dp[0][N - 1], dp[1][N - 1]))
+    
+    '''
+T = int(input())
+ans = []
+
+for tc in range(T):
+    N = int(input())
+    data = []
+    dp = [[0] * N for _ in range(2)]
+
+    for i in range(2):
+        data.append(list(map(int,input().split())))
+
+    dp[0][0] = data[0][0]
+    dp[1][0] = data[1][0]
+    dp[0][1] = dp[1][0] + data[0][1]
+    dp[1][1] = dp[0][0] + data[1][1]
+
+
+    for i in range(2,N):
+        dp[0][i] = max( dp[1][i-2] + data[0][i],data[0][i] + dp[1][i-1])
+        dp[1][i] = max( dp[0][i-2] + data[1][i],data[1][i] + dp[0][i-1])
+
+    ans.append(max(dp[0][N-1],dp[1][N-1]))
+
+for i in range(len(ans)):
+    print(ans[i])
+    '''
