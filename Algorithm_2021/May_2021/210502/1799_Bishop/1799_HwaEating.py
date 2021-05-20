@@ -22,3 +22,4 @@ for i in range(n):
 dfs(0,0)
 dfs(1,1)
 print(sum(ans))
+print(ans)
