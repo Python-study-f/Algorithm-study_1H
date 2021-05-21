@@ -41,7 +41,7 @@ def check_omock(x,y,val):
 
 board = [[] for _ in range(19)]
 ans = []
-dictional = [(1,0),(1,1),(0,1),(1,-1)] # 아래, 아래오른쪽대각선, 오른쪽, 왼쪽 아래 대각선
+dictional = [(1,0),(1,1),(0,1),(-1,1)] # 아래, 아래오른쪽대각선, 오른쪽, 왼쪽 아래 대각선
 
 for i in range(19):
     board[i] = list(map(int,input().split()))
