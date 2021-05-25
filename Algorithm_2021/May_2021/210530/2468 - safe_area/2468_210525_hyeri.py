@@ -12,9 +12,8 @@ for i in range(N):
     for j in range(N):
         mx = max(mx, mp[i][j])
 result = 0
-visit = [[0] * N for _ in range(N)]
 
-
+visit = []
 def dfs(x, y, n, K):
     for d in range(4):
         tx = x + dx[d]
