@@ -38,3 +38,6 @@ def solution(rows, columns, queries):
         answer.append(rotate(x1-1,y1-1,x2-1,y2-1,arr))
         
     return answer
+
+rows, columns, querise = 3,3,[[1,1,2,2],[1,2,2,3],[2,1,3,2],[2,2,3,3]]
+print(*solution(rows,columns,querise))
