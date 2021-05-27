@@ -24,7 +24,7 @@ def dfs(x, y, n, K):
             visit[tx][ty] = n
             dfs(tx, ty, n, K)
 
-
+# 단지번호 
 for k in range(mx + 1):
     num = 1
     visit = [[0] * N for _ in range(N)]
