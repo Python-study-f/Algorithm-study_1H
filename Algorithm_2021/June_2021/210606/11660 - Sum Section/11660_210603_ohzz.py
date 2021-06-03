@@ -1,4 +1,7 @@
 # 구간 합 구하기 11660 백준
+import sys
+
+input = sys.stdin.readline
 n, m = map(int, input().split())
 
 board = []
@@ -15,6 +18,10 @@ for i in range(n):
     for j in range(1, n):
         board[j][i] += board[j - 1][i]
 
+board.insert(0, [0] * n)
+
+for i in board:
+    i.insert(0, 0)
 
 for _ in range(m):
     x1, y1, x2, y2 = map(int, input().split())
