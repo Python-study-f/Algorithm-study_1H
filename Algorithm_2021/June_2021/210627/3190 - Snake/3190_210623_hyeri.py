@@ -14,12 +14,10 @@ for _ in range(K):
     mp[a][b] = 1
 
 L = int(input())
-time = 0
 for _ in range(L):
     a, b = input().split()
     a = int(a)
     snake.append([a, b])
-    time = a
 
 mp[1][1] = 2
 
